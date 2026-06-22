@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Your Name</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --bg:#090506;
+    --panel:#13090c;
+    --red:#d64a67;
+    --light:#f3e8ea;
+    --muted:#9f8d91;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--bg);
+    color:var(--light);
+    font-family:'Inter',sans-serif;
+}
+
+/* NAV */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:24px 8%;
+    display:flex;
+    justify-content:space-between;
+    backdrop-filter:blur(10px);
+    background:rgba(9,5,6,.75);
+    z-index:100;
+}
+
+.logo{
+    font-family:'JetBrains Mono',monospace;
+    color:var(--red);
+}
+
+nav ul{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+nav a{
+    color:var(--muted);
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--light);
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding:0 10%;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.status{
+    color:var(--red);
+    font-family:'JetBrains Mono',monospace;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(4rem,10vw,9rem);
+    line-height:.9;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:600px;
+    color:var(--muted);
+    font-size:1.1rem;
+}
+
+.photo-box{
+    margin-top:40px;
+    width:180px;
+    height:180px;
+    border:1px dashed var(--red);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--muted);
+    font-family:'JetBrains Mono',monospace;
+}
+
+/* SECTION */
+
+section{
+    padding:120px 10%;
+}
+
+.section-label{
+    font-family:'JetBrains Mono',monospace;
+    color:var(--red);
+    margin-bottom:30px;
+}
+
+/* ABOUT */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+}
+
+.about p{
+    color:var(--muted);
+    line-height:1.9;
+}
+
+/* TIMELINE */
+
+.timeline{
+    border-left:2px solid #31151d;
+    padding-left:40px;
+}
+
+.entry{
+    margin-bottom:60px;
+    position:relative;
+}
+
+.entry::before{
+    content:'';
+    position:absolute;
+    left:-49px;
+    top:6px;
+    width:14px;
+    height:14px;
+    background:var(--red);
+    border-radius:50%;
+}
+
+.year{
+    color:var(--red);
+    font-family:'JetBrains Mono',monospace;
+}
+
+.entry h3{
+    margin:8px 0;
+}
+
+.entry p{
+    color:var(--muted);
+}
+
+/* PROJECTS */
+
+.projects{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.project-note{
+    background:var(--panel);
+    padding:30px;
+    border-left:4px solid var(--red);
+}
+
+.project-note h3{
+    margin-bottom:10px;
+}
+
+.project-note p{
+    color:var(--muted);
+}
+
+/* CONTACT */
+
+.contact{
+    text-align:center;
+}
+
+.contact h2{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.contact p{
+    color:var(--muted);
+    margin:10px 0;
+}
+
+/* FOOTER */
+
+footer{
+    padding:40px;
+    text-align:center;
+    color:var(--muted);
+    border-top:1px solid #1c1115;
+}
+
+@media(max-width:800px){
+
+.about{
+    grid-template-columns:1fr;
+}
+
+.hero h1{
+    font-size:4rem;
+}
+
+nav ul{
+    display:none;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">/portfolio</div>
+
+    <ul>
+        <li><a href="#about">about</a></li>
+        <li><a href="#journey">journey</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#contact">contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="status">
+STATUS: learning, building, improving
+</div>
+
+<h1>
+Nishanthini
+</h1>
+
+<p>
+Data Analyst • Student • Problem Solver
+</p>
+
+<div class="photo-box">
+<img src="C:\Users\USER\Desktop\dummy\nisha.jpeg" height="200px" width="200px">
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<div class="section-label">
+01 / ABOUT
+</div>
+
+<div class="about">
+
+<p>
+I am an aspiring Data Warehouse and Cloud Computing enthusiast, currently
+             learning and building solutions using Snowflake. I enjoy working with data,
+              designing efficient data pipelines, and exploring modern cloud technologies.
+</p>
+
+<p>
+ My goal is to transform raw data into meaningful insights while continuously
+                expanding my skills in data engineering and cloud platforms.
+</p>
+
+</div>
+
+</section>
+
+<section id="journey">
+
+<div class="section-label">
+02 / JOURNEY
+</div>
+
+<div class="timeline">
+
+<div class="entry">
+<div class="year">2022</div>
+<h3>Started Bachelor's Degree</h3>
+<p>Hindusthan college of engineering</p>
+</div>
+
+<div class="entry">
+<div class="year">2024</div>
+<h3>Python Certification</h3>
+<p>Coursera</p>
+</div>
+
+<div class="entry">
+<div class="year">2025</div>
+<h3>Web Development Certification</h3>
+<p>Udemy</p>
+</div>
+
+<div class="entry">
+<div class="year">NOW</div>
+<h3>Cloud computing using AWS</h3>
+<p>SpotKnack</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<div class="section-label">
+03 / PROJECTS
+</div>
+
+<div class="projects">
+
+<div class="project-note">
+<h3>Sales metric table dashboard</h3>
+
+<p>
+Built using snowflake datawarehouse. Calculates various sales metrics 
+which updates automatically each month.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="contact">
+
+<div class="section-label">
+04 / CONTACT
+</div>
+
+<h2>Let's Connect</h2>
+
+<p>mnishanthini50@gmail.com</p>
+<p>linkedin.com/in/yourname</p>
+<p>https://github.com/nishaacodes</p>
+<p>91+ 9003940410</p>
+
+</section>
+
+<footer>
+Built by Nishanthini • 2026
+</footer>
+
+</body>
+</html>
